@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css\main.css">
+        <link rel="stylesheet" href="css\all.css">
+        <link rel="stylesheet" href="css\bootstrap.min.css">
+        <title>A budget application</title>
+    </head>
+    <body>
+
+        <header>
+            <h1>budget calculator</h1>
+        </header>
+        <main>
+
+            <div class="section2">
+                <div class="card2 container-fluid">
+                    <div class="box1">
+                        <h2>budget</h2>
+                        <i class="fas fa-money-bill-alt symbol"></i>
+                        <p> <span class="currency">$</span> <span class="budgetText text" id="budgetText">0</span></p>
+                    </div>
+
+                    <div class="box2">
+                        <h2>expenses</h2>
+                        <i class="fas fa-credit-card symbol"></i>
+                        <p> <span class="currency">$</span> <span class="expenseText text" id="currentExpenses">0</span></p>
+                    </div>
+
+                    <div class="box3">
+                        <h2>balance</h2>
+                        <i class="fas fa-dollar-sign symbol"></i>
+                        <p> <span class="currency balanceCurrency">$</span> <span class="balanceText text" id="currentBalance">0 </span></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="sub-container container-fluid">
+
+               
+
+
+                
+                <div id="section1">
+                    <div class="card1">
+                        <div id="feedback2" hidden>
+                            <p> <i class="fa fa-exclamation-triangle"></i> please insert your current budget</p>
+                        </div>
+                        <h2>please insert your budget</h3>
+                            <input type="number" required  id="budgetAmount">
+                            <button class="btn" id="insertBudget" > insert</button>
+                    </div>
+                </div>
+
+                <div class="section3">
+                    <div class="card3">
+                        <div id="feedback" hidden>
+                            <p> <i class="fa fa-exclamation-triangle"></i> we cannot process an empty data</p>
+                        </div>
+                        <h2>enter your expenditures</h2>
+                        <input type="text" id="expenditureText" required>
+                        <h2>enter your expenditure amount</h2>
+                        <input type="number" id="expenditureAmount" required>
+                        <button class="btn" id="expenseButtton">add expenses</button>
+                    </div>
+                </div>
+
+                </div>
+
+                <div id="section4" hidden>
+                    <div class="card4" >
+                        <h3>expenses</h3>
+                        <h3>amount</h3>
+                    </div>
+                </div>
+
+               
+
+            </div>
+        </main>
+
+        <script src="main.js">
+        </script>
+    </body>
+</html>
