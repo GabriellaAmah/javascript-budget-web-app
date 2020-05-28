@@ -45,10 +45,11 @@
 
 
             <div class="expenseBudgetContainer">
-                <div class="sub-container container-fluid">   
+                <div class="innerContainer container"> 
+ <!--BudgetContainer-->  
                 <div id="budgetContainer">
                     <div class="innerBudgetCard">
-                        <div id="innerBudgetFeedback" hidden>
+                        <div id="feedback" hidden>
                             <p> 
                             <i class="fa fa-exclamation-triangle"></i> Type in your budget:
                         </p>
@@ -58,11 +59,13 @@
                             <button class="btn" id="insertBudget" > insert</button>
                     </div>
                 </div>
-
-                <div class="section3">
-                    <div class="card3">
+<!--ExpenseContainer-->
+                <div class="expenseContainer">
+                    <div class="expenseCard">
                         <div id="feedback" hidden>
-                            <p> <i class="fa fa-exclamation-triangle"></i> we cannot process an empty data</p>
+                            <p>
+                             <i class="fa fa-exclamation-triangle"></i> we cannot process an empty data
+                            </p>
                         </div>
                         <h2>enter your expenditures</h2>
                         <input type="text" id="expenditureText" required>
@@ -73,16 +76,13 @@
                 </div>
 
                 </div>
-
-                <div id="section4" hidden>
-                    <div class="card4" >
+<!--ExpenseAmountContainer-->
+                <div id="expenseAmount">
+                    <div class="expenseAmountCard">
                         <h3>expenses</h3>
                         <h3>amount</h3>
                     </div>
-                </div>
-
-               
-
+                </div>      
             </div>
         </main>
 
