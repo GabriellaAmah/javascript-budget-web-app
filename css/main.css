@@ -1,246 +1,266 @@
-body{
-    margin: 0;
-    box-sizing: border-box;
-    overflow-x: hidden;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.container{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin-top: 4rem;
+body {
+  overflow-x: hidden;
 }
 
-.sub-container{
-    background-color: #b3ff66;
+/**Feedback styles**/
+
+#feedback {
+  background-color: red;
+  width: 20rem;
+  color: white;
+  position: relative;
+  bottom: 1rem;
+  left: 2rem;
+  animation-name: feedback;
+  animation-duration: 3s;
+  animation-delay: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
 }
 
-header h1{
-    font-family:'Roboto Slab' ;
-    letter-spacing: 1px;
-    text-align: center;
-    margin-top: 3rem;
-    font-weight: 600;
-    font-size: 3rem;
-    word-spacing: 1px;
+#feedback p {
+  padding-left: 1rem;
+  padding-top: 1rem;
+  font-weight: bold;
 }
 
-.card1{
-    margin-top: 3rem;
-    display: grid;
-    grid-template-columns: 1fr;
-    border: 1px solid #33001a;
-    border-radius: 0.5rem;
-    margin-left: 1rem;
-    width: 28rem;
+/**Header Styles*/
+
+header h1 {
+  font-family: "Roboto Slab";
+  letter-spacing: 1px;
+  text-align: center;
+  margin-top: 3rem;
+  font-weight: 600;
+  font-size: 3rem;
+  text-transform: capitalize;
+  word-spacing: 1px;
 }
 
-.card1 h2{
-    margin-left: 1.5rem;
-    margin-top: 1rem;
-    letter-spacing: 1px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 25px;
+/***Budget Calculator styles**/
+
+.budget-calculator {
+  max-width: 100%;
+  margin: 0 20px;
 }
 
-.card1 input{
-    width: 15rem;
-    margin-left: 1.5rem;
-    padding: 0.5rem 1rem;
-    font-size: 18px;
-    border: 1px solid transparent !important;
-    outline: transparent !important;
-    border-bottom: 2px solid #999999 !important;
+.budgetCard {
+  display: flex;
+  justify-content: space-around;
+  background-color: #d9ffb3;
+  align-items: center;
+  margin: 2rem auto;
 }
 
-.card1 button{
-    width: 7rem;
-    margin-top: 1.5rem;
-    margin-left: 1.5rem;
-    padding: 0.5rem 1rem;
-    border: 1px solid #33001a;
-    border-radius: 1rem;
-    margin-bottom: 1rem;
-    font-size: 16px;
-    cursor: pointer;
-    outline: transparent;
+.budgetBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin: 1rem auto;
 }
 
-.card2{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    margin-top: 2rem;
-    background-color: #d9ffb3;
-    width: 50rem !important;
-    margin: auto !important;
+.budgetCard h2 {
+  font-size: 23px;
+  color: aqua;
+  text-transform: capitalize;
+  text-align: center;
 }
 
-.section2{
-    margin-top: 3rem;
-    margin-left: 1rem;
+.budget-calculator .symbol {
+  font-size: 2rem;
+  color: rgb(121, 186, 207);
 }
 
-.section2 h2{
-    margin-left: 2rem;
+.budget-calculator .currency {
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
-.section2 .symbol{
-    padding-left: 3rem;
+.budget-calculator .text {
+  font-size: 1.5rem;
+  margin-left: 0.2rem;
+}
+
+.budget-calculator .balanceCurrency {
+  animation-name: textAnimate;
+  animation-duration: 1.5s;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
+}
+
+/**InnerBugetCard**/
+
+.innerBudgetCard {
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  border: 1px solid #33001a;
+  border-radius: 0.5rem;
+  margin-left: 1rem;
+  width: 28rem;
+}
+
+.innerBudgetCard h2 {
+  font-size: 22px;
+  margin-left: 1.5rem;
+  margin-top: 1rem;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.innerBudgetCard input {
+  width: 15rem;
+  margin-left: 1.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 18px;
+  border: 1px solid transparent !important;
+  outline: transparent !important;
+  border-bottom: 2px solid #999999 !important;
+}
+
+.innerBudgetCard button {
+  width: 7rem;
+  margin-top: 1.5rem;
+  margin-left: 1.5rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid #33001a;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  font-size: 16px;
+  cursor: pointer;
+  text-transform: capitalize;
+  outline: transparent;
+}
+/**ExpenseBudgetContainer Styles**/
+
+.expenseBudgetContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 4rem;
+}
+
+.innerContainer {
+  background-color: #b3ff66;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2rem;
+}
+
+/**ExpenseCard Styles**/
+
+.expenseCard {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-top: 3rem;
+  grid-template-columns: 1fr;
+  border: 1px solid #33001a;
+  border-radius: 0.5rem;
+  margin-left: 1rem;
+  width: 28rem;
+}
+
+.expenseCard input {
+  width: 20rem;
+  margin-left: 1.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 18px;
+  border: 2px solid #999999;
+  outline: transparent;
+}
+
+.expenseCard h2 {
+  font-size: 22px;
+  margin-left: 1.5rem;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  margin-top: 1rem;
+}
+
+.expenseCard button {
+  width: 10rem;
+  margin-top: 1.5rem;
+  margin-left: 1.5rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid #33001a;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  font-size: 16px;
+  cursor: pointer;
+  text-transform: capitalize;
+  outline: transparent;
+}
+
+#expenseAmount {
+  margin-top: 2rem;
+}
+
+.expenseAmountCard {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 30rem;
+  margin-left: 1.2rem;
+  border: 1px solid transparent;
+  border-radius: 1rem;
+}
+
+.expenseAmountCard p {
+  padding-left: 1rem;
+  padding-top: 0.5rem;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.expenseAmountCard i {
+  padding-top: 1rem;
+  cursor: pointer;
+}
+/**Animations**/
+@keyframes textAnimate {
+  from {
+    font-size: 1.5rem;
+    color: black;
+  }
+  to {
     font-size: 2rem;
-    color:rgb(121, 186, 207) ;
+    color: red;
+  }
 }
 
-.section2 .currency{
-    margin-left: 2rem;
-    font-size: 1.5rem;
-    font-weight: bold;
+@keyframes feedback {
+  from {
+    bottom: 0.3rem;
+  }
+  to {
+    top: 0.1rem;
+  }
 }
 
-.section2 .text{
-    font-size: 1.5rem;
-    margin-left: 0.2rem;
+@media only screen and (max-width: 576px) {
+  header h1 {
+    font-size: 30px;
+    text-align: center;
+  }
+  .innerContainer {
+    display: flex;
+    /*For some weird reason, this flex-direction is not working!! Gotta figure it out**/
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
 }
-
-.section2 .balanceText, .balanceCurrency{
-    animation-name: textAnimate;
-    animation-duration: 1.5s;
-    animation-delay: 2s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease;
-    
-}
-
-@keyframes textAnimate{
-    from{
-        font-size: 1.5rem;
-        color: black;
-    }
-    to{
-        font-size: 2rem;
-        color: red;
-    }
-}
-
-.card3 #feedback, #feedback2{
-    background-color: red;
-    width: 20rem;
-    color: white;
-    position: relative;
-    bottom: 1rem;
-    left: 2rem;
-    animation-name: feedback;
-    animation-duration: 3s;
-    animation-delay: 1s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
-
-}
-
-@keyframes feedback{
-    from{
-        bottom: 0.3rem;
-    }
-    to{
-        top:0.1rem;
-    }
-}
-
-.card3 #feedback, #feedback2 p{
-    padding-left: 1rem;
-    padding-top: 1rem;
-    font-weight: bold;
-}
-
-.card3{
-    display: grid;
-    grid-template-columns: 1fr;
-    margin-top: 3rem;
-    grid-template-columns: 1fr;
-    border: 1px solid #33001a;
-    border-radius: 0.5rem;
-    margin-left: 1rem;
-    width: 28rem;
-}
-
-.card3 input{
-    width: 20rem;
-    margin-left: 1.5rem;
-    padding: 0.5rem 1rem;
-    font-size: 18px;
-    border: 2px solid #999999;
-    outline: transparent;
-}
-
-.card3 h2{
-    font-size: 25px;
-    margin-left: 1.5rem;
-    letter-spacing: 1px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    margin-top: 1rem;
-
-}
-
-.card3 button{
-    width: 10rem;
-    margin-top: 1.5rem;
-    margin-left: 1.5rem;
-    padding: 0.5rem 1rem;
-    border: 1px solid #33001a;
-    border-radius: 1rem;
-    margin-bottom: 1rem;
-    font-size: 16px;
-    cursor: pointer;
-    outline: transparent;
-}
-
-#section4{
-    margin-top: 2rem;
-}
-
-.card4{
-    margin-top: 1rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr ;
-    width: 30rem;
-    margin-left: 1.2rem;
-    border: 1px solid transparent;
-    border-radius: 1rem;
-}
-
-.card4 p{
-    padding-left: 1rem;
-    padding-top: 0.5rem;
-    font-weight: bold;
-    font-size: 18px;
-}
-
-.card4 i{
-    padding-top: 1rem;
-    cursor: pointer;
-}
-
-@media screen and (max-width: 480px){
-
-    header h1{
-        font-size: 30px;
-        text-align: center;
-    }
-    .card2{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        margin-top: 2rem;
-        background-color: #d9ffb3;
-        width:40rem !important;
-        margin: auto !important;
-        padding-right: 10rem !important;
-    }
-
-    .container{
-        display: grid;
-        grid-template-columns: 1fr;
-    }
-
-    .sub-container{
-        margin-left: 3rem !important;
-    }
-}
-
